@@ -1,0 +1,27 @@
+{
+  "version": "2026-11-18",
+  "ingredients": [
+    { "id": "soybean", "name": "黄豆", "aliases": ["大豆"], "category": "豆类", "tags": ["高蛋白", "养生"], "unit": "g", "defaultAmount": 50, "substitutes": ["black_soybean"], "cautions": ["必须充分煮熟", "大豆过敏禁用"] },
+    { "id": "black_soybean", "name": "黑豆", "aliases": ["黑大豆"], "category": "豆类", "tags": ["高蛋白", "乌发"], "unit": "g", "defaultAmount": 40, "substitutes": ["soybean"], "cautions": ["肠胃胀气者适量", "大豆过敏禁用"] },
+    { "id": "red_bean", "name": "红豆", "aliases": ["赤小豆"], "category": "豆类", "tags": ["高纤维", "祛湿"], "unit": "g", "defaultAmount": 40, "substitutes": ["mung_bean"], "cautions": ["必须煮熟"] },
+    { "id": "mung_bean", "name": "绿豆", "aliases": [], "category": "豆类", "tags": ["清热", "清爽"], "unit": "g", "defaultAmount": 40, "substitutes": ["red_bean"], "cautions": ["脾胃虚寒者少食"] },
+    { "id": "oat", "name": "燕麦", "aliases": ["燕麦米"], "category": "谷物", "tags": ["高纤维", "饱腹"], "unit": "g", "defaultAmount": 30, "substitutes": ["millet"], "cautions": [] },
+    { "id": "millet", "name": "小米", "aliases": [], "category": "谷物", "tags": ["养胃", "温和"], "unit": "g", "defaultAmount": 30, "substitutes": ["oat"], "cautions": [] },
+    { "id": "black_rice", "name": "黑米", "aliases": [], "category": "谷物", "tags": ["花青素", "养生"], "unit": "g", "defaultAmount": 30, "substitutes": ["purple_rice"], "cautions": ["建议提前浸泡"] },
+    { "id": "purple_rice", "name": "紫米", "aliases": ["血糯米"], "category": "谷物", "tags": ["花青素", "养生"], "unit": "g", "defaultAmount": 30, "substitutes": ["black_rice"], "cautions": ["建议提前浸泡"] },
+    { "id": "walnut", "name": "核桃", "aliases": ["胡桃"], "category": "坚果", "tags": ["健脑", "高脂"], "unit": "g", "defaultAmount": 20, "substitutes": ["cashew"], "cautions": ["坚果过敏禁用"] },
+    { "id": "cashew", "name": "腰果", "aliases": [], "category": "坚果", "tags": ["顺滑", "植物奶"], "unit": "g", "defaultAmount": 20, "substitutes": ["walnut"], "cautions": ["坚果过敏禁用"] },
+    { "id": "red_date", "name": "红枣", "aliases": ["大枣"], "category": "药食同源", "tags": ["甜味", "暖胃"], "unit": "g", "defaultAmount": 15, "substitutes": [], "cautions": ["含糖较高"] },
+    { "id": "honey", "name": "蜂蜜", "aliases": [], "category": "调味", "tags": ["甜味", "冷饮调味"], "unit": "g", "defaultAmount": 10, "substitutes": [], "cautions": ["1 岁以下婴儿禁用；控糖人群少用", "热饮中风味与营养受损，仅用于冷饮"] },
+    { "id": "apple", "name": "苹果", "aliases": [], "category": "水果", "tags": ["清爽", "高纤维"], "unit": "g", "defaultAmount": 150, "substitutes": ["pear"], "cautions": [] },
+    { "id": "banana", "name": "香蕉", "aliases": [], "category": "水果", "tags": ["顺滑", "补能"], "unit": "g", "defaultAmount": 100, "substitutes": ["avocado"], "cautions": ["含糖较高"] },
+    { "id": "avocado", "name": "牛油果", "aliases": ["鳄梨"], "category": "水果", "tags": ["顺滑", "好脂肪"], "unit": "g", "defaultAmount": 100, "substitutes": ["banana"], "cautions": ["热量较高，减脂期适量"] },
+    { "id": "pear", "name": "雪梨", "aliases": ["梨"], "category": "水果", "tags": ["润燥", "清爽"], "unit": "g", "defaultAmount": 150, "substitutes": ["apple"], "cautions": [] },
+    { "id": "carrot", "name": "胡萝卜", "aliases": [], "category": "蔬菜", "tags": ["胡萝卜素", "低糖"], "unit": "g", "defaultAmount": 80, "substitutes": ["pumpkin"], "cautions": [] },
+    { "id": "pumpkin", "name": "南瓜", "aliases": [], "category": "蔬菜", "tags": ["清甜", "顺滑"], "unit": "g", "defaultAmount": 200, "substitutes": ["carrot"], "cautions": ["碳水化合物较高，控糖人群适量"] },
+    { "id": "spinach", "name": "菠菜", "aliases": [], "category": "蔬菜", "tags": ["高铁", "绿叶"], "unit": "g", "defaultAmount": 60, "substitutes": ["kale"], "cautions": ["草酸较高，可焯水"] },
+    { "id": "kale", "name": "羽衣甘蓝", "aliases": [], "category": "蔬菜", "tags": ["高纤维", "轻食"], "unit": "g", "defaultAmount": 60, "substitutes": ["spinach"], "cautions": [] },
+    { "id": "milk", "name": "牛奶", "aliases": [], "category": "乳制品", "tags": ["补蛋白", "顺滑"], "unit": "ml", "defaultAmount": 250, "substitutes": ["soy_milk"], "cautions": ["乳糖不耐受者慎用"] },
+    { "id": "soy_milk", "name": "豆浆", "aliases": ["无糖豆浆"], "category": "饮品基底", "tags": ["植物蛋白"], "unit": "ml", "defaultAmount": 300, "substitutes": ["milk"], "cautions": ["大豆过敏禁用"] }
+  ]
+}
