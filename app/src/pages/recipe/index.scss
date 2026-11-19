@@ -1,1 +1,318 @@
-/* 食谱详情页样式在 Step 9 补充 */
+.rdetail {
+  padding-bottom: 100px;
+
+  &__empty {
+    display: block;
+    text-align: center;
+    color: var(--c-text-secondary);
+    padding: 40px 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__emoji {
+    font-size: 40px;
+  }
+
+  &__titles {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__meta {
+    font-size: 12px;
+    color: var(--c-text-secondary);
+    margin-top: 4px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  &__tag {
+    font-size: 11px;
+    color: var(--c-primary);
+    background: rgba(47, 125, 91, 0.08);
+    border-radius: var(--radius-chip);
+    padding: 3px 10px;
+  }
+
+  &__gap {
+    background: #f6e3c5;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-top: 12px;
+  }
+
+  &__gap-text {
+    display: block;
+    font-size: 12px;
+    color: #8a5a1a;
+  }
+
+  &__soak {
+    background: rgba(47, 125, 91, 0.08);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--c-primary);
+  }
+
+  &__ing {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--c-card);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+
+  &__ing-emoji {
+    font-size: 18px;
+  }
+
+  &__ing-name {
+    font-size: 14px;
+    font-weight: 500;
+
+    &--owned {
+      color: var(--c-primary);
+    }
+  }
+
+  &__ing-amount {
+    font-size: 12px;
+    color: var(--c-text-secondary);
+    margin-left: 2px;
+  }
+
+  &__ing-badge {
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: var(--radius-chip);
+    background: rgba(47, 125, 91, 0.1);
+    color: var(--c-primary);
+
+    &--opt {
+      background: #eceae5;
+      color: var(--c-text-secondary);
+    }
+
+    &--group {
+      background: var(--c-accent);
+      color: #ffffff;
+    }
+  }
+
+  &__ing-own {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--c-primary);
+  }
+
+  &__ing-sub {
+    margin-left: auto;
+    font-size: 11px;
+    color: #8a5a1a;
+  }
+
+  &__group {
+    background: var(--c-secondary);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  &__group-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--c-accent);
+    margin-bottom: 8px;
+  }
+
+  &__water {
+    background: var(--c-card);
+    border-radius: var(--radius-card);
+    padding: 12px;
+    box-shadow: var(--shadow-card);
+  }
+
+  &__water-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__water-label {
+    font-size: 13px;
+    color: var(--c-text-secondary);
+  }
+
+  &__stepper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__step-btn {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: var(--c-secondary);
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  &__step-num {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 56px;
+    text-align: center;
+  }
+
+  &__thick {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__thick-btn {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: var(--radius-chip);
+    background: var(--c-secondary);
+    color: var(--c-text-secondary);
+
+    &--on {
+      background: var(--c-primary);
+      color: #ffffff;
+      font-weight: 600;
+    }
+  }
+
+  &__water-result {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--c-primary);
+  }
+
+  &__water-min {
+    display: block;
+    font-size: 11px;
+    color: var(--c-text-secondary);
+    margin-top: 4px;
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__step {
+    display: flex;
+    gap: 10px;
+    background: var(--c-card);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+
+  &__step-num {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: var(--c-primary);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  &__step-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  &__nutrition {
+    display: flex;
+    gap: 16px;
+    background: var(--c-card);
+    border-radius: var(--radius-card);
+    padding: 12px;
+    font-size: 12px;
+    color: var(--c-text-secondary);
+  }
+
+  &__warnings {
+    background: #fdf1ee;
+    border-radius: var(--radius-card);
+    padding: 12px;
+  }
+
+  &__warning {
+    display: block;
+    font-size: 12px;
+    color: #b4543e;
+    margin-bottom: 6px;
+  }
+
+  &__disclaimer {
+    display: block;
+    font-size: 11px;
+    color: var(--c-text-secondary);
+    margin-top: 4px;
+  }
+
+  &__actions {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: #ffffff;
+    border-top: 1px solid rgba(38, 49, 44, 0.08);
+  }
+
+  &__action {
+    flex: 1;
+    text-align: center;
+    padding: 11px 0;
+    border-radius: 12px;
+    background: var(--c-secondary);
+    font-size: 14px;
+    color: var(--c-text);
+
+    &--fav {
+      color: var(--c-accent);
+      font-weight: 600;
+    }
+
+    &--made {
+      background: var(--c-primary);
+      color: #ffffff;
+      font-weight: 600;
+    }
+  }
+}
