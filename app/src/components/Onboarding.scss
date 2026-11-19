@@ -1,0 +1,60 @@
+.onb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(38, 49, 44, 0.45);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  &__card {
+    background: var(--c-bg);
+    border-radius: 20px;
+    padding: 24px 20px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  &__title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--c-primary);
+  }
+
+  &__sub {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--c-text-secondary);
+  }
+
+  &__chips {
+    margin-top: 16px;
+  }
+
+  &__btn {
+    margin-top: 16px;
+    background: var(--c-primary);
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  &__skip {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--c-text-secondary);
+    padding: 8px;
+  }
+}
