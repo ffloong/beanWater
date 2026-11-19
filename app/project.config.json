@@ -1,0 +1,20 @@
+{
+  "miniprogramRoot": "dist/",
+  "compileType": "miniprogram",
+  "projectname": "beanwater-app",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": false,
+    "postcss": false,
+    "minified": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "libVersion": "latest",
+  "condition": {}
+}

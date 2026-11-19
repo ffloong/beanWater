@@ -1,0 +1,23 @@
+/* BeanWater 设计 tokens（PRODUCT_DESIGN.md §8.1） */
+:root,
+page {
+  --c-primary: #2f7d5b;
+  --c-secondary: #f7f3ea;
+  --c-accent: #e0a458;
+  --c-text: #26312c;
+  --c-text-secondary: #6b7a72;
+  --c-bg: #faf8f4;
+  --c-card: #ffffff;
+  --c-success: #2f7d5b;
+  --c-warning: #e0a458;
+  --radius-card: 16px;
+  --radius-chip: 999px;
+  --shadow-card: 0 2px 8px rgba(38, 49, 44, 0.06);
+}
+
+page {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-size: 14px;
+  line-height: 1.5;
+}
