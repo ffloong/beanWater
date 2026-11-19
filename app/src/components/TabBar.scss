@@ -1,0 +1,34 @@
+.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background: #ffffff;
+  border-top: 1px solid rgba(38, 49, 44, 0.08);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0 6px;
+    color: var(--c-text-secondary);
+
+    &--active {
+      color: var(--c-primary);
+      font-weight: 600;
+    }
+  }
+
+  &__icon {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  &__label {
+    font-size: 11px;
+    margin-top: 2px;
+  }
+}

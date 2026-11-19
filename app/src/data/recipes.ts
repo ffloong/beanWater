@@ -15,7 +15,7 @@ export const RECIPE_CATEGORIES = [
 
 export type RecipeCategory = (typeof RECIPE_CATEGORIES)[number]
 
-export const CATEGORY_EMOJI: Record<RecipeCategory, string> = {
+export const CATEGORY_EMOJI: Record<string, string> = {
   养生豆浆: '🫘',
   米糊: '🥣',
   五谷糊: '🌾',

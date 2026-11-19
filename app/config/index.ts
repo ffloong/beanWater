@@ -14,7 +14,8 @@ export default defineConfig<'webpack5'>(async () => {
       828: 1.81 / 2,
     },
     sourceRoot: 'src',
-    outputRoot: 'dist',
+    // 按平台分目录，避免 h5 与 weapp 构建互相覆盖
+    outputRoot: process.env.TARO_ENV === 'h5' ? 'dist/h5' : 'dist/weapp',
     plugins: [],
     defineConstants: {},
     copy: {

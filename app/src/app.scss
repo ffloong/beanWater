@@ -21,3 +21,15 @@ page {
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* 四个 Tab 页共用的页面容器：为底部 TabBar 留出空间 */
+.page {
+  padding: 16px 16px 96px;
+}
+
+.section-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 20px 0 12px;
+}
+

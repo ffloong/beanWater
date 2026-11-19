@@ -1,0 +1,26 @@
+.match-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: var(--radius-chip);
+  flex-shrink: 0;
+
+  &--can_make {
+    color: #ffffff;
+    background: var(--c-success);
+  }
+
+  &--missing_one {
+    color: #8a5a1a;
+    background: #f6e3c5;
+  }
+
+  &--substitutable {
+    color: #7a5210;
+    background: #f3ecd8;
+  }
+
+  &--missing_more {
+    color: var(--c-text-secondary);
+    background: #eceae5;
+  }
+}
