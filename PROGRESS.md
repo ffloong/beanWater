@@ -16,9 +16,9 @@
 ## Steps
 
 - [x] Step 0 远程仓库（origin/main）+ 本进度文档
-- [ ] Step 1 Taro 脚手架（React+TS，H5/小程序双构建通过）
-- [ ] Step 2 数据层与类型（导入 seed、结构化 allergens/emoji、数据校验脚本）
-- [ ] Step 3 核心逻辑 + vitest 单测（匹配三类/至少选一组/稀疏兜底/时段/去重/水量换算）
+- [x] Step 1 Taro 脚手架（React+TS，H5/小程序双构建通过）
+- [x] Step 2 数据层与类型（导入 seed、结构化 allergens/emoji、数据校验脚本）
+- [x] Step 3 核心逻辑 + vitest 单测（匹配三类/至少选一组/稀疏兜底/时段/去重/水量换算）
 - [ ] Step 4 全局状态与持久化（常备清单/口味档案/收藏/做过了/引导标记）
 - [ ] Step 5 应用外壳 + 基础组件（四 Tab、设计 tokens、Chip/RecipeCard/MatchBadge）
 - [ ] Step 6 食材库页 + 首次引导（60 秒勾选）
