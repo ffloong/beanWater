@@ -1,1 +1,83 @@
-/* 我的页样式在 Step 10 补充 */
+.me {
+  &__empty {
+    display: block;
+    font-size: 13px;
+    color: var(--c-text-secondary);
+    padding: 4px 0 8px;
+  }
+
+  &__fav,
+  &__made {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--c-card);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+  }
+
+  &__fav-title,
+  &__made-title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__fav-meta,
+  &__made-time {
+    font-size: 12px;
+    color: var(--c-text-secondary);
+  }
+
+  &__card {
+    background: var(--c-card);
+    border-radius: var(--radius-card);
+    padding: 14px;
+    box-shadow: var(--shadow-card);
+  }
+
+  &__label {
+    display: block;
+    font-size: 12px;
+    color: var(--c-text-secondary);
+    margin: 8px 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__chip {
+    font-size: 13px;
+    padding: 7px 16px;
+    border-radius: var(--radius-chip);
+    background: var(--c-secondary);
+    color: var(--c-text);
+
+    &--on {
+      background: var(--c-primary);
+      color: #ffffff;
+      font-weight: 600;
+    }
+  }
+
+  &__about {
+    display: block;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--c-text-secondary);
+  }
+
+  &__reset {
+    margin-top: 14px;
+    text-align: center;
+    color: #b4543e;
+    font-size: 13px;
+    border: 1px solid rgba(180, 84, 62, 0.4);
+    border-radius: 10px;
+    padding: 9px 0;
+  }
+}
