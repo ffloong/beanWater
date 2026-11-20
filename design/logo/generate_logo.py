@@ -29,37 +29,37 @@ def new_canvas(bg):
     return img, ImageDraw.Draw(img)
 
 
-def draw_glass(draw, glass_fill, liquid_color, bubble_color, detail_color):
-    """杯子：圆角矩形杯身 + 正弦液面 + 气泡。坐标基于 1024 设计稿 * S。"""
+def draw_mug(draw, body_fill, liquid_color, swirl_color, handle_color, hole_color,
+             highlight_color):
+    """微俯视马克杯：椭圆杯口可见液面 + 右侧把手（参考用户提供的样式）。
+
+    绘制顺序：把手 → 杯身（矩形+底部圆弧） → 杯口沿 → 内壁洞 → 液面 → 奶漩 → 高光。
+    hole_color 传背景色，用于给把手“打洞”和杯口内壁。
+    """
     s = S
-    # 杯身（底部圆角更大，模拟玻璃杯）
-    x0, y0, x1, y1 = 362 * s, 350 * s, 662 * s, 742 * s
-    draw.rounded_rectangle([x0, y0, x1, y1], radius=30 * s, fill=glass_fill)
+    # 1. 把手（在杯身后面，先画）：外环 + 用背景色打洞
+    draw.ellipse([656 * s, 390 * s, 800 * s, 584 * s], fill=handle_color)
+    draw.ellipse([688 * s, 424 * s, 768 * s, 550 * s], fill=hole_color)
 
-    # 液体：杯内缩，顶部为两段正弦波
-    lx0, ly1 = x0 + 20 * s, y1 - 22 * s
-    lx1 = x1 - 20 * s
-    y_liquid = 566 * s
-    amp = 14 * s
-    pts = []
-    steps = 120
-    for i in range(steps + 1):
-        x = lx0 + (lx1 - lx0) * i / steps
-        y = y_liquid + amp * math.sin(i / steps * math.pi * 2.2 + 0.4)
-        pts.append((x, y))
-    pts += [(lx1, ly1), (lx0, ly1)]
-    draw.polygon(pts, fill=liquid_color)
+    # 2. 杯身：直筒矩形 + 底部圆弧鼓肚
+    draw.rectangle([330 * s, 370 * s, 694 * s, 656 * s], fill=body_fill)
+    draw.ellipse([330 * s, 606 * s, 694 * s, 728 * s], fill=body_fill)
 
-    # 气泡（液体里的两个小圆）
-    draw.ellipse([448 * s, 632 * s, 468 * s, 652 * s], fill=bubble_color)
-    draw.ellipse([556 * s, 606 * s, 570 * s, 620 * s], fill=bubble_color)
+    # 3. 杯口沿（比杯身略宽，形成唇边）
+    draw.ellipse([312 * s, 308 * s, 712 * s, 442 * s], fill=body_fill)
+    # 4. 内壁（露出的杯口“洞”）
+    draw.ellipse([338 * s, 326 * s, 686 * s, 424 * s], fill=hole_color)
+    # 5. 液面（比洞再小一圈，明显看出有液体）
+    draw.ellipse([358 * s, 338 * s, 666 * s, 412 * s], fill=liquid_color)
+    # 6. 奶漩：液面上的弧线
+    draw.arc([400 * s, 346 * s, 626 * s, 404 * s], start=120, end=340,
+             fill=swirl_color, width=int(9 * s))
+    draw.arc([470 * s, 356 * s, 560 * s, 394 * s], start=150, end=330,
+             fill=swirl_color, width=int(6 * s))
 
-    # 杯口高光条（增强玻璃感）
-    draw.rounded_rectangle(
-        [x0 + 26 * s, y0 + 22 * s, x0 + 40 * s, y0 + 200 * s],
-        radius=7 * s,
-        fill=detail_color,
-    )
+    # 7. 杯身左侧高光竖条
+    draw.rounded_rectangle([352 * s, 480 * s, 374 * s, 636 * s],
+                           radius=11 * s, fill=highlight_color)
 
 
 def draw_bean(img, bean_fill, eye_color, center, angle, size=(150, 100)):
@@ -127,20 +127,20 @@ def save(img, name):
 
 # --- A：绿底图标版（主推） ---
 img, draw = new_canvas(GREEN)
-draw_glass(draw, glass_fill=CREAM, liquid_color=YELLOW,
-           bubble_color=CREAM, detail_color=(255, 255, 255, 70))
-draw_bean(img, bean_fill=CREAM, eye_color=GREEN, center=(672, 296), angle=-28)
-draw_sparkle(draw, (318, 268), 26, CREAM)
-draw_sparkle(draw, (724, 452), 16, YELLOW_LIGHT)
+draw_mug(draw, body_fill=CREAM, liquid_color=YELLOW, swirl_color=CREAM,
+         handle_color=CREAM, hole_color=GREEN, highlight_color=(255, 255, 255, 255))
+draw_bean(img, bean_fill=CREAM, eye_color=GREEN, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, CREAM)
+draw_sparkle(draw, (786, 540), 16, YELLOW_LIGHT)
 save(img, "logo-a-green.png")
 
 # --- B：米色底亮色版 ---
 img, draw = new_canvas(CREAM)
-draw_glass(draw, glass_fill=GREEN, liquid_color=YELLOW,
-           bubble_color=CREAM, detail_color=(255, 255, 255, 60))
-draw_bean(img, bean_fill=GREEN, eye_color=CREAM, center=(672, 296), angle=-28)
-draw_sparkle(draw, (318, 268), 26, YELLOW)
-draw_sparkle(draw, (724, 452), 16, GREEN)
+draw_mug(draw, body_fill=GREEN, liquid_color=YELLOW, swirl_color=CREAM,
+         handle_color=GREEN, hole_color=CREAM, highlight_color=(86, 156, 126, 255))
+draw_bean(img, bean_fill=GREEN, eye_color=CREAM, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, YELLOW)
+draw_sparkle(draw, (786, 540), 16, GREEN)
 save(img, "logo-b-cream.png")
 
 # --- C：文字版 ---
