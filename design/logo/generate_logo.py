@@ -38,8 +38,9 @@ def draw_mug(draw, body_fill, liquid_color, swirl_color, handle_color, hole_colo
     把手用粗弧线绘制，两端藏进杯身，无尖刺。
     """
     s = S
-    # 1. 把手：粗弧线 C 形，两端藏进杯身（起点/终点角度 ±118° 保证端点在杯身下方）
-    draw.arc([640 * s, 388 * s, 824 * s, 606 * s], start=-118, end=118,
+    # 1. 把手：粗弧线 C 形。PIL 弧线描边自轮廓向内延伸，端点径向切口需完全
+    #    藏进杯身（x<=694）：内径 48 → 角度 >=142.3°，取 ±150° 留余量
+    draw.arc([640 * s, 388 * s, 824 * s, 606 * s], start=-150, end=150,
              fill=handle_color, width=int(44 * s))
 
     # 2. 杯身：直筒矩形 + 底部圆弧鼓肚（矩形底边 = 椭圆最宽处，平滑衔接）
