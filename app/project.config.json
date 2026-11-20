@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/weapp/",
   "compileType": "miniprogram",
   "projectname": "beanwater-app",
-  "appid": "touristappid",
+  "appid": "wx13ff29678d43035c",
   "setting": {
     "urlCheck": true,
     "es6": false,
