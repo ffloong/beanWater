@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-18",
+  "version": "2026-11-20",
   "recipes": [
     {
       "id": "classic_soybean_milk",
@@ -17,7 +17,7 @@
       "soakMinutes": 480,
       "mode": "豆浆",
       "steps": [
-        "黄豆清洗；若破壁机不支持干豆，建议提前浸泡（soakMinutes）。",
+        "黄豆清洗；若破壁机不支持干豆，建议提前浸泡。",
         "放入破壁机，加水至 900ml。",
         "选择豆浆模式，制作完成后可按口味补少量红枣甜味。"
       ],
@@ -67,7 +67,7 @@
       "soakMinutes": 480,
       "mode": "米糊/浓汤",
       "steps": [
-        "红豆清洗，可提前浸泡（soakMinutes）。",
+        "红豆清洗，可提前浸泡。",
         "与燕麦一起放入破壁机，加水至 800ml。",
         "选择米糊模式；喜欢浓稠可减少 50ml 水。"
       ],
@@ -175,6 +175,624 @@
       "tags": ["晚餐", "暖胃", "家常", "儿童"],
       "nutrition": { "caloriesKcal": 160, "proteinG": 5, "sugarG": 14 },
       "warnings": []
+    },
+    {
+      "id": "red_date_goji_soy_milk",
+      "title": "红枣枸杞豆浆",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 20,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "soybean", "amount": 50, "required": true },
+        { "ingredientId": "red_date", "amount": 15, "required": true },
+        { "ingredientId": "goji_berry", "amount": 10, "required": false }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "黄豆清洗；不支持干豆的机型建议提前浸泡。",
+        "红枣去核，与黄豆一起放入破壁机，加水至 900ml。",
+        "选择豆浆模式，结束后撒入枸杞焖 1 分钟即可。"
+      ],
+      "tags": ["早餐", "家常", "温和", "长辈"],
+      "nutrition": { "caloriesKcal": 230, "proteinG": 15, "sugarG": 12 },
+      "warnings": ["控糖人群减少红枣量"]
+    },
+    {
+      "id": "peanut_soy_milk",
+      "title": "花生豆浆",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 22,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "soybean", "amount": 40, "required": true },
+        { "ingredientId": "peanut", "amount": 30, "required": true }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "黄豆、花生清洗；不支持干豆的机型建议提前浸泡。",
+        "放入破壁机，加水至 900ml。",
+        "选择豆浆模式，口感自带坚果香浓，无需加糖。"
+      ],
+      "tags": ["早餐", "香浓", "家常", "高蛋白"],
+      "nutrition": { "caloriesKcal": 250, "proteinG": 13, "sugarG": 4 },
+      "warnings": []
+    },
+    {
+      "id": "black_sesame_black_soybean_milk",
+      "title": "黑芝麻黑豆豆浆",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 22,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "black_soybean", "amount": 40, "required": true },
+        { "ingredientId": "black_sesame", "amount": 15, "required": true }
+      ],
+      "waterMl": 850,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "黑豆清洗；不支持干豆的机型建议提前浸泡。",
+        "黑豆与黑芝麻一起放入破壁机，加水至 850ml。",
+        "选择豆浆模式，黑色食材传统搭配，香气浓郁。"
+      ],
+      "tags": ["早餐", "香浓", "长辈", "黑色食材传统搭配"],
+      "nutrition": { "caloriesKcal": 260, "proteinG": 14, "sugarG": 5 },
+      "warnings": []
+    },
+    {
+      "id": "lotus_lily_soy_milk",
+      "title": "莲子百合豆浆",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "soybean", "amount": 40, "required": true },
+        { "ingredientId": "lotus_seed", "amount": 20, "required": true },
+        { "ingredientId": "lily_bulb", "amount": 15, "required": false }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "黄豆、干莲子清洗，提前浸泡。",
+        "全部食材放入破壁机，加水至 900ml。",
+        "选择豆浆模式，口感清淡回甘，适合晚间。"
+      ],
+      "tags": ["晚餐", "温和", "长辈", "家常"],
+      "nutrition": { "caloriesKcal": 240, "proteinG": 13, "sugarG": 6 },
+      "warnings": []
+    },
+    {
+      "id": "snow_fungus_soy_milk",
+      "title": "银耳豆浆",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "soybean", "amount": 40, "required": true },
+        { "ingredientId": "snow_fungus", "amount": 10, "required": true }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "银耳提前泡发撕小朵，黄豆清洗。",
+        "一起放入破壁机，加水至 900ml。",
+        "选择豆浆模式，口感顺滑带胶质。"
+      ],
+      "tags": ["早餐", "顺滑", "家常"],
+      "nutrition": { "caloriesKcal": 220, "proteinG": 12, "sugarG": 4 },
+      "warnings": []
+    },
+    {
+      "id": "coix_red_bean_soy_milk",
+      "title": "薏米红豆豆浆",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "red_bean", "amount": 40, "required": true },
+        { "ingredientId": "coix_seed", "amount": 30, "required": true }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "红豆、薏米清洗，提前浸泡。",
+        "放入破壁机，加水至 900ml。",
+        "选择豆浆模式；薏米性偏凉，孕妇不宜。"
+      ],
+      "tags": ["早餐", "传统食养", "饱腹"],
+      "nutrition": { "caloriesKcal": 240, "proteinG": 10, "sugarG": 5 },
+      "warnings": []
+    },
+    {
+      "id": "three_bean_soy_milk",
+      "title": "三豆豆浆",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "soybean", "amount": 30, "required": true },
+        { "ingredientId": "black_soybean", "amount": 30, "required": true },
+        { "ingredientId": "red_bean", "amount": 30, "required": true }
+      ],
+      "waterMl": 950,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "三种豆子清洗；不支持干豆的机型建议提前浸泡。",
+        "放入破壁机，加水至 950ml。",
+        "选择豆浆模式，豆香层次丰富。"
+      ],
+      "tags": ["早餐", "高蛋白", "家常"],
+      "nutrition": { "caloriesKcal": 250, "proteinG": 15, "sugarG": 5 },
+      "warnings": []
+    },
+    {
+      "id": "yam_millet_porridge",
+      "title": "山药小米米糊",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 16,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "millet", "amount": 40, "required": true },
+        { "ingredientId": "chinese_yam", "amount": 120, "required": true }
+      ],
+      "waterMl": 750,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "山药削皮切块（黏液致痒可戴手套），小米清洗。",
+        "一起放入破壁机，加水至 750ml。",
+        "选择米糊模式，绵密温和，须确保熟透。"
+      ],
+      "tags": ["早餐", "养胃", "温和", "长辈"],
+      "nutrition": { "caloriesKcal": 210, "proteinG": 6, "sugarG": 8 },
+      "warnings": []
+    },
+    {
+      "id": "pumpkin_millet_porridge",
+      "title": "南瓜小米糊",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 15,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "millet", "amount": 40, "required": true },
+        { "ingredientId": "pumpkin", "amount": 150, "required": true }
+      ],
+      "waterMl": 750,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "南瓜去皮去瓤切块，小米清洗。",
+        "放入破壁机，加水至 750ml。",
+        "选择米糊模式，天然清甜无需加糖。"
+      ],
+      "tags": ["早餐", "清甜", "儿童", "家常"],
+      "nutrition": { "caloriesKcal": 200, "proteinG": 5, "sugarG": 12 },
+      "warnings": ["南瓜碳水化合物较高，控糖人群适量"]
+    },
+    {
+      "id": "sweet_potato_oat_porridge",
+      "title": "红薯燕麦糊",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 16,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "oat", "amount": 30, "required": true },
+        { "ingredientId": "sweet_potato", "amount": 150, "required": true }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "红薯去皮切块，燕麦清洗。",
+        "放入破壁机，加水至 800ml。",
+        "选择米糊模式，饱腹感强，适合代餐。"
+      ],
+      "tags": ["早餐", "饱腹", "高纤维", "减脂"],
+      "nutrition": { "caloriesKcal": 240, "proteinG": 6, "sugarG": 14 },
+      "warnings": []
+    },
+    {
+      "id": "brown_rice_red_date_porridge",
+      "title": "糙米红枣糊",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "brown_rice", "amount": 40, "required": true },
+        { "ingredientId": "red_date", "amount": 15, "required": true }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 120,
+      "mode": "米糊",
+      "steps": [
+        "糙米提前浸泡 2 小时口感更细腻。",
+        "红枣去核，与糙米一起放入破壁机，加水至 800ml。",
+        "选择米糊模式。"
+      ],
+      "tags": ["早餐", "高纤维", "饱腹"],
+      "nutrition": { "caloriesKcal": 240, "proteinG": 6, "sugarG": 12 },
+      "warnings": ["控糖人群减少红枣量"]
+    },
+    {
+      "id": "quinoa_corn_porridge",
+      "title": "藜麦玉米糊",
+      "category": "五谷糊",
+      "servings": 2,
+      "timeMinutes": 16,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "quinoa", "amount": 30, "required": true },
+        { "ingredientId": "corn", "amount": 100, "required": true }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "藜麦冲洗，玉米剥粒或切段。",
+        "放入破壁机，加水至 800ml。",
+        "选择米糊模式，植物蛋白与清甜兼顾。"
+      ],
+      "tags": ["早餐", "高蛋白", "快手", "儿童"],
+      "nutrition": { "caloriesKcal": 230, "proteinG": 8, "sugarG": 10 },
+      "warnings": []
+    },
+    {
+      "id": "buckwheat_brown_rice_porridge",
+      "title": "荞麦糙米糊",
+      "category": "五谷糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "buckwheat", "amount": 40, "required": true },
+        { "ingredientId": "brown_rice", "amount": 40, "required": true }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 120,
+      "mode": "米糊",
+      "steps": [
+        "荞麦、糙米清洗，提前浸泡 2 小时。",
+        "放入破壁机，加水至 800ml。",
+        "选择米糊模式，谷物风味突出。"
+      ],
+      "tags": ["早餐", "高纤维", "饱腹"],
+      "nutrition": { "caloriesKcal": 230, "proteinG": 7, "sugarG": 6 },
+      "warnings": []
+    },
+    {
+      "id": "walnut_sesame_cereal",
+      "title": "核桃黑芝麻糊",
+      "category": "五谷糊",
+      "servings": 2,
+      "timeMinutes": 16,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "millet", "amount": 30, "required": true },
+        { "ingredientId": "walnut", "amount": 20, "required": true },
+        { "ingredientId": "black_sesame", "amount": 15, "required": true }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "小米清洗，核桃掰小块。",
+        "全部食材放入破壁机，加水至 800ml。",
+        "选择米糊模式，香浓顺滑，红枣可替代甜味。"
+      ],
+      "tags": ["下午茶", "香浓", "长辈"],
+      "nutrition": { "caloriesKcal": 280, "proteinG": 9, "sugarG": 6 },
+      "warnings": []
+    },
+    {
+      "id": "eight_treasure_porridge",
+      "title": "八宝糊",
+      "category": "五谷糊",
+      "servings": 2,
+      "timeMinutes": 28,
+      "difficulty": 2,
+      "ingredients": [
+        { "ingredientId": "oat", "amount": 20, "required": true },
+        { "ingredientId": "millet", "amount": 20, "required": true },
+        { "ingredientId": "red_bean", "amount": 20, "required": true },
+        { "ingredientId": "peanut", "amount": 20, "required": true },
+        { "ingredientId": "lotus_seed", "amount": 15, "required": false },
+        { "ingredientId": "red_date", "amount": 15, "required": false }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 240,
+      "mode": "米糊/浓汤",
+      "steps": [
+        "红豆、莲子提前浸泡 4 小时，其余食材清洗。",
+        "全部放入破壁机，加水至 900ml。",
+        "选择米糊模式，料足浓稠，可按口味补红枣甜味。"
+      ],
+      "tags": ["早餐", "饱腹", "家常"],
+      "nutrition": { "caloriesKcal": 280, "proteinG": 11, "sugarG": 12 },
+      "warnings": []
+    },
+    {
+      "id": "cucumber_kiwi_cooler",
+      "title": "黄瓜猕猴桃清爽汁",
+      "category": "果蔬汁",
+      "servings": 2,
+      "timeMinutes": 8,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "cucumber", "amount": 120, "required": true },
+        { "ingredientId": "kiwi", "amount": 100, "required": true },
+        { "ingredientId": "honey", "amount": 8, "required": false }
+      ],
+      "waterMl": 250,
+      "minWaterMl": 300,
+      "soakMinutes": 0,
+      "mode": "果蔬/搅拌",
+      "steps": [
+        "黄瓜切段，猕猴桃去皮切块。",
+        "放入破壁机，加水至 250ml（不足最低水位线则加至 300ml）。",
+        "选择果蔬模式，冷藏后口感更佳。"
+      ],
+      "tags": ["下午茶", "清爽", "低负担"],
+      "nutrition": { "caloriesKcal": 130, "proteinG": 3, "sugarG": 18 },
+      "warnings": []
+    },
+    {
+      "id": "orange_carrot_juice",
+      "title": "橙子胡萝卜汁",
+      "category": "果蔬汁",
+      "servings": 2,
+      "timeMinutes": 8,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "orange", "amount": 150, "required": true },
+        { "ingredientId": "carrot", "amount": 80, "required": true }
+      ],
+      "waterMl": 250,
+      "minWaterMl": 300,
+      "soakMinutes": 0,
+      "mode": "果蔬/搅拌",
+      "steps": [
+        "橙子去皮分瓣，胡萝卜去皮切块。",
+        "放入破壁机，加水至 250ml（不足最低水位线则加至 300ml）。",
+        "选择果蔬模式，尽快饮用。"
+      ],
+      "tags": ["下午茶", "清爽", "家常"],
+      "nutrition": { "caloriesKcal": 140, "proteinG": 3, "sugarG": 20 },
+      "warnings": ["果蔬汁含天然糖分，控糖人群适量"]
+    },
+    {
+      "id": "apple_carrot_juice",
+      "title": "苹果胡萝卜汁",
+      "category": "果蔬汁",
+      "servings": 2,
+      "timeMinutes": 8,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "apple", "amount": 150, "required": true },
+        { "ingredientId": "carrot", "amount": 80, "required": true }
+      ],
+      "waterMl": 250,
+      "minWaterMl": 300,
+      "soakMinutes": 0,
+      "mode": "果蔬/搅拌",
+      "steps": [
+        "苹果去核切块，胡萝卜去皮切块。",
+        "放入破壁机，加水至 250ml（不足最低水位线则加至 300ml）。",
+        "选择果蔬模式，甜香适口，适合入门。"
+      ],
+      "tags": ["早餐", "清爽", "家常", "儿童"],
+      "nutrition": { "caloriesKcal": 150, "proteinG": 3, "sugarG": 21 },
+      "warnings": ["果蔬汁含天然糖分，控糖人群适量"]
+    },
+    {
+      "id": "pear_snow_fungus_drink",
+      "title": "雪梨银耳润饮",
+      "category": "果蔬汁",
+      "servings": 2,
+      "timeMinutes": 20,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "pear", "amount": 150, "required": true },
+        { "ingredientId": "snow_fungus", "amount": 10, "required": true }
+      ],
+      "waterMl": 300,
+      "minWaterMl": 300,
+      "soakMinutes": 240,
+      "mode": "豆浆/浓汤",
+      "steps": [
+        "银耳提前泡发撕小朵，雪梨去核切块。",
+        "放入破壁机，加水至 300ml。",
+        "选择豆浆模式温和加热，温饮更顺滑。"
+      ],
+      "tags": ["下午茶", "润燥", "温和"],
+      "nutrition": { "caloriesKcal": 150, "proteinG": 2, "sugarG": 18 },
+      "warnings": []
+    },
+    {
+      "id": "corn_carrot_sweet_juice",
+      "title": "玉米胡萝卜清甜汁",
+      "category": "果蔬汁",
+      "servings": 2,
+      "timeMinutes": 12,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "corn", "amount": 120, "required": true },
+        { "ingredientId": "carrot", "amount": 60, "required": true }
+      ],
+      "waterMl": 250,
+      "minWaterMl": 300,
+      "soakMinutes": 0,
+      "mode": "果蔬/豆浆",
+      "steps": [
+        "玉米剥粒，胡萝卜去皮切块。",
+        "放入破壁机，加水至 250ml（不足最低水位线则加至 300ml）。",
+        "选择果蔬或豆浆模式（加热版更香浓）。"
+      ],
+      "tags": ["下午茶", "清甜", "家常", "儿童"],
+      "nutrition": { "caloriesKcal": 160, "proteinG": 4, "sugarG": 18 },
+      "warnings": []
+    },
+    {
+      "id": "ginger_apple_warm_drink",
+      "title": "姜枣苹果热饮",
+      "category": "果蔬汁",
+      "servings": 2,
+      "timeMinutes": 10,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "apple", "amount": 150, "required": true },
+        { "ingredientId": "ginger", "amount": 5, "required": true },
+        { "ingredientId": "red_date", "amount": 10, "required": false }
+      ],
+      "waterMl": 300,
+      "minWaterMl": 300,
+      "soakMinutes": 0,
+      "mode": "果蔬/豆浆",
+      "steps": [
+        "苹果去核切块，生姜切薄片（用量宜少）。",
+        "放入破壁机，加水至 300ml。",
+        "选择豆浆模式温热饮用，天冷来一杯很舒服。"
+      ],
+      "tags": ["早餐", "暖胃", "快手"],
+      "nutrition": { "caloriesKcal": 160, "proteinG": 2, "sugarG": 22 },
+      "warnings": ["生姜辛辣，儿童与肠胃敏感者减量或去姜"]
+    },
+    {
+      "id": "mango_yogurt_smoothie",
+      "title": "芒果酸奶昔",
+      "category": "奶昔",
+      "servings": 2,
+      "timeMinutes": 6,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "mango", "amount": 150, "required": true },
+        { "ingredientId": "yogurt", "amount": 200, "required": false, "requiredAnyGroup": "base" },
+        { "ingredientId": "milk", "amount": 200, "required": false, "requiredAnyGroup": "base" },
+        { "ingredientId": "soy_milk", "amount": 200, "required": false, "requiredAnyGroup": "base" }
+      ],
+      "waterMl": 0,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "奶昔/搅拌",
+      "steps": [
+        "芒果去皮去核切块。",
+        "酸奶、牛奶或豆浆任选一样做基底，液态总量不低于 400ml。",
+        "选择奶昔模式，冷藏芒果口感更佳。"
+      ],
+      "tags": ["下午茶", "快手", "顺滑"],
+      "nutrition": { "caloriesKcal": 240, "proteinG": 7, "sugarG": 30 },
+      "warnings": ["乳制品过敏者选择豆浆基底", "果蔬汁含天然糖分，控糖人群适量"]
+    },
+    {
+      "id": "blueberry_banana_smoothie",
+      "title": "蓝莓香蕉奶昔",
+      "category": "奶昔",
+      "servings": 2,
+      "timeMinutes": 6,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "blueberry", "amount": 80, "required": true },
+        { "ingredientId": "banana", "amount": 100, "required": true },
+        { "ingredientId": "yogurt", "amount": 200, "required": false, "requiredAnyGroup": "base" },
+        { "ingredientId": "milk", "amount": 200, "required": false, "requiredAnyGroup": "base" },
+        { "ingredientId": "soy_milk", "amount": 200, "required": false, "requiredAnyGroup": "base" }
+      ],
+      "waterMl": 0,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "奶昔/搅拌",
+      "steps": [
+        "香蕉切段，蓝莓清洗。",
+        "酸奶、牛奶或豆浆任选一样做基底，液态总量不低于 400ml。",
+        "选择奶昔模式，颜色紫蓝颜值很高。"
+      ],
+      "tags": ["早餐", "快手", "轻食", "运动后"],
+      "nutrition": { "caloriesKcal": 230, "proteinG": 7, "sugarG": 28 },
+      "warnings": ["乳制品过敏者选择豆浆基底"]
+    },
+    {
+      "id": "snow_fungus_lotus_soup",
+      "title": "银耳莲子羹",
+      "category": "汤羹",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 2,
+      "ingredients": [
+        { "ingredientId": "snow_fungus", "amount": 15, "required": true },
+        { "ingredientId": "lotus_seed", "amount": 25, "required": true },
+        { "ingredientId": "red_date", "amount": 15, "required": false }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 240,
+      "mode": "浓汤",
+      "steps": [
+        "银耳提前泡发撕小朵，莲子、红枣清洗。",
+        "放入破壁机，加水至 900ml。",
+        "选择浓汤模式，出胶后口感浓滑，温热食用。"
+      ],
+      "tags": ["晚餐", "温和", "家常", "长辈"],
+      "nutrition": { "caloriesKcal": 180, "proteinG": 5, "sugarG": 16 },
+      "warnings": []
+    },
+    {
+      "id": "corn_velvet_soup",
+      "title": "奶香玉米浓汤",
+      "category": "汤羹",
+      "servings": 2,
+      "timeMinutes": 22,
+      "difficulty": 1,
+      "ingredients": [
+        { "ingredientId": "corn", "amount": 180, "required": true },
+        { "ingredientId": "milk", "amount": 200, "required": false, "requiredAnyGroup": "base" },
+        { "ingredientId": "soy_milk", "amount": 200, "required": false, "requiredAnyGroup": "base" },
+        { "ingredientId": "carrot", "amount": 60, "required": false }
+      ],
+      "waterMl": 600,
+      "minWaterMl": 450,
+      "soakMinutes": 0,
+      "mode": "浓汤",
+      "steps": [
+        "玉米剥粒（预留少许装饰），胡萝卜切小丁。",
+        "主料放入破壁机，加水至 600ml，选择浓汤模式。",
+        "结束后拌入牛奶或豆浆增香，撒少量盐调味。"
+      ],
+      "tags": ["晚餐", "顺滑", "儿童", "家常"],
+      "nutrition": { "caloriesKcal": 240, "proteinG": 7, "sugarG": 16 },
+      "warnings": ["乳制品过敏者选择豆浆基底"]
     }
   ]
 }
