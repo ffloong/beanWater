@@ -20,7 +20,7 @@ export default function RecipeCard({ recipe, match, favorite, onTap, onToggleFav
   return (
     <View className='rcard' onClick={onTap}>
       <View className='rcard__head'>
-        <Text className='rcard__emoji'>{CATEGORY_EMOJI[recipe.category] ?? '🥤'}</Text>
+        <Text className='rcard__emoji'>{recipe.emoji ?? CATEGORY_EMOJI[recipe.category] ?? '🥤'}</Text>
         <View className='rcard__titles'>
           <Text className='rcard__title'>{recipe.title}</Text>
           <Text className='rcard__meta'>

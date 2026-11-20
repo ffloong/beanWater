@@ -5,6 +5,7 @@ import { getRecipe, CATEGORY_EMOJI } from '../../data/recipes'
 import { getIngredient, ingredientName } from '../../data/ingredients'
 import { matchRecipe, aggregatedWarnings } from '../../logic/match'
 import { calcWater, type Thickness } from '../../logic/water'
+import { renderStep } from '../../logic/stepText'
 import { useStore } from '../../store/useStore'
 import MatchBadge from '../../components/MatchBadge'
 import './index.scss'
@@ -57,7 +58,7 @@ export default function RecipeDetail() {
     const ing = getIngredient(item.ingredientId)
     if (!ing) return null
     const owned = pantrySet.has(item.ingredientId)
-    const subCovered = !owned && (ing.substitutes ?? []).some((s) => pantrySet.has(s))
+    const subId = owned ? undefined : (ing.substitutes ?? []).find((s) => pantrySet.has(s))
     const amount = plan.ingredients.find((x) => x.ingredientId === item.ingredientId)?.amount ?? item.amount
     return (
       <View key={item.ingredientId} className='rdetail__ing'>
@@ -74,10 +75,8 @@ export default function RecipeDetail() {
         </Text>
         {owned ? (
           <Text className='rdetail__ing-own'>✓ 有</Text>
-        ) : subCovered ? (
-          <Text className='rdetail__ing-sub'>
-            可用 {(ing.substitutes ?? []).find((s) => pantrySet.has(s) && ingredientName(s))} 替代
-          </Text>
+        ) : subId ? (
+          <Text className='rdetail__ing-sub'>可用 {ingredientName(subId)} 替代</Text>
         ) : null}
       </View>
     )
@@ -104,7 +103,7 @@ export default function RecipeDetail() {
   return (
     <View className='page rdetail'>
       <View className='rdetail__head'>
-        <Text className='rdetail__emoji'>{CATEGORY_EMOJI[recipe.category] ?? '🥤'}</Text>
+        <Text className='rdetail__emoji'>{recipe.emoji ?? CATEGORY_EMOJI[recipe.category] ?? '🥤'}</Text>
         <View className='rdetail__titles'>
           <Text className='rdetail__title'>{recipe.title}</Text>
           <Text className='rdetail__meta'>
@@ -194,7 +193,7 @@ export default function RecipeDetail() {
         {recipe.steps.map((s, idx) => (
           <View key={idx} className='rdetail__step'>
             <Text className='rdetail__step-num'>{idx + 1}</Text>
-            <Text className='rdetail__step-text'>{s}</Text>
+            <Text className='rdetail__step-text'>{renderStep(recipe, s, plan)}</Text>
           </View>
         ))}
       </View>

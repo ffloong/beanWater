@@ -37,6 +37,8 @@ export interface Nutrition {
 export interface Recipe {
   id: RecipeId
   title: string
+  /** 食谱专属图标（缺省回退到分类图标） */
+  emoji?: string
   category: string
   servings: number
   timeMinutes: number
