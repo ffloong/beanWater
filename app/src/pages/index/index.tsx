@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
-import { View, Text } from '@tarojs/components'
+import { useMemo, useState } from 'react'
+import { View, Text, Input } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import TabBar from '../../components/TabBar'
 import Onboarding from '../../components/Onboarding'
@@ -42,11 +42,30 @@ export default function Index() {
 
   const openRecipe = (id: string) => Taro.navigateTo({ url: `/pages/recipe/index?id=${id}` })
 
+  const [kw, setKw] = useState('')
+  const goSearch = () => {
+    const q = kw.trim()
+    Taro.redirectTo({
+      url: q ? `/pages/discover/index?kw=${encodeURIComponent(q)}` : '/pages/discover/index',
+    })
+  }
+
   return (
     <View className='page page-index'>
-      <View className='search-bar' onClick={() => Taro.redirectTo({ url: '/pages/discover/index' })}>
+      <View className='search-bar'>
         <Text className='search-bar__icon'>🔍</Text>
-        <Text className='search-bar__placeholder'>搜索食谱、食材、功效、场景</Text>
+        <Input
+          className='search-bar__input'
+          placeholder='搜索食谱、食材、功效、场景'
+          value={kw}
+          onInput={(e) => setKw(e.detail.value)}
+          onConfirm={goSearch}
+        />
+        {kw.trim() ? (
+          <Text className='search-bar__go' onClick={goSearch}>
+            搜索
+          </Text>
+        ) : null}
       </View>
 
       <View className='quick'>

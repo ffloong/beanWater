@@ -46,18 +46,19 @@ function matchConditions(r: Recipe, conds: Set<Condition>): boolean {
 
 export default function Discover() {
   const router = useRouter()
-  const presetCat = (() => {
-    const raw = router.params.cat
-    if (!raw) return '全部'
+  const decode = (raw?: string) => {
+    if (!raw) return undefined
     try {
       return decodeURIComponent(raw)
     } catch {
       return raw
     }
-  })()
+  }
+  const presetCat = decode(router.params.cat)
+  const presetKw = decode(router.params.kw) ?? ''
 
   const [cat, setCat] = useState(RECIPE_CATEGORIES.includes(presetCat as never) ? presetCat : '全部')
-  const [keyword, setKeyword] = useState('')
+  const [keyword, setKeyword] = useState(presetKw)
   const [tag, setTag] = useState<string | null>(null)
   const [conds, setConds] = useState<Set<Condition>>(new Set())
   const [sort, setSort] = useState<SortKey>('smart')
