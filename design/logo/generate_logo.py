@@ -192,6 +192,47 @@ draw_sparkle(draw, (300, 252), 26, CREAM)
 draw_sparkle(draw, (786, 540), 16, YELLOW_LIGHT)
 save(img, "logo-g-layered.png")
 
+# --- 浅底深杯系列（logo-b-cream 风格：米色背景 + 绿杯） ---
+
+# --- H：米色底 + 绿杯 + 米白液 + 黄豆色豆子 ---
+img, draw = new_canvas(CREAM)
+draw_mug(draw, body_fill=GREEN, liquid_color=MILK_WHITE, swirl_color=YELLOW,
+         handle_color=GREEN, hole_color=CREAM, highlight_color=(86, 156, 126, 255),
+         swirl_width=7)
+draw_bean(img, bean_fill=SOYBEAN_YELLOW, eye_color=GREEN, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, YELLOW)
+draw_sparkle(draw, (786, 540), 16, GREEN)
+save(img, "logo-h-cream-milk-soybean.png")
+
+# --- I：米色底 + 绿杯 + 米白液 + 红豆色豆子 ---
+img, draw = new_canvas(CREAM)
+draw_mug(draw, body_fill=GREEN, liquid_color=MILK_WHITE, swirl_color=YELLOW,
+         handle_color=GREEN, hole_color=CREAM, highlight_color=(86, 156, 126, 255),
+         swirl_width=7)
+draw_bean(img, bean_fill=RED_BEAN, eye_color=CREAM, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, YELLOW)
+draw_sparkle(draw, (786, 540), 16, GREEN)
+save(img, "logo-i-cream-milk-redbean.png")
+
+# --- J：米色底 + 绿杯 + 红豆色液体 + 黄豆色豆子 ---
+img, draw = new_canvas(CREAM)
+draw_mug(draw, body_fill=GREEN, liquid_color=RED_BEAN, swirl_color=MILK_WHITE,
+         handle_color=GREEN, hole_color=CREAM, highlight_color=(86, 156, 126, 255))
+draw_bean(img, bean_fill=SOYBEAN_YELLOW, eye_color=GREEN, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, YELLOW)
+draw_sparkle(draw, (786, 540), 16, GREEN)
+save(img, "logo-j-cream-redbean-drink.png")
+
+# --- K：米色底 + 绿杯 + 分层奶盖 + 红豆色豆子 ---
+img, draw = new_canvas(CREAM)
+draw_mug(draw, body_fill=GREEN, liquid_color=YELLOW, swirl_color=YELLOW,
+         handle_color=GREEN, hole_color=CREAM, highlight_color=(86, 156, 126, 255),
+         liquid_top_color=MILK_WHITE)
+draw_bean(img, bean_fill=RED_BEAN, eye_color=CREAM, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, YELLOW)
+draw_sparkle(draw, (786, 540), 16, GREEN)
+save(img, "logo-k-cream-layered.png")
+
 # --- C：文字版 ---
 img, draw = new_canvas(GREEN)
 font = load_font(300 * S)
@@ -209,6 +250,8 @@ files = [
     "logo-a-green.png", "logo-b-cream.png", "logo-c-text.png",
     "logo-d-milk-soybean.png", "logo-e-milk-redbean.png",
     "logo-f-redbean-drink.png", "logo-g-layered.png",
+    "logo-h-cream-milk-soybean.png", "logo-i-cream-milk-redbean.png",
+    "logo-j-cream-redbean-drink.png", "logo-k-cream-layered.png",
 ]
 cell, gap, pad = 420, 40, 60
 row = len(files) * cell + (len(files) - 1) * gap
