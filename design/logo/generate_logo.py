@@ -30,19 +30,20 @@ def new_canvas(bg):
 
 
 def draw_mug(draw, body_fill, liquid_color, swirl_color, handle_color, hole_color,
-             highlight_color):
+             highlight_color, liquid_top_color=None, swirl_width=9):
     """微俯视马克杯：椭圆杯口可见液面 + 右侧把手（参考用户提供的样式）。
 
-    绘制顺序：把手 → 杯身（矩形+底部圆弧） → 杯口沿 → 内壁洞 → 液面 → 奶漩 → 高光。
-    hole_color 传背景色，用于给把手“打洞”和杯口内壁。
+    绘制顺序：把手 → 杯身 → 杯口沿 → 内壁洞 → 液面（可选上层奶盖）→ 奶漩 → 高光。
+    衔接要点：杯身矩形底边与底部椭圆最宽处（y=667）平齐，轮廓无台阶；
+    把手用粗弧线绘制，两端藏进杯身，无尖刺。
     """
     s = S
-    # 1. 把手（在杯身后面，先画）：外环 + 用背景色打洞
-    draw.ellipse([656 * s, 390 * s, 800 * s, 584 * s], fill=handle_color)
-    draw.ellipse([688 * s, 424 * s, 768 * s, 550 * s], fill=hole_color)
+    # 1. 把手：粗弧线 C 形，两端藏进杯身（起点/终点角度 ±118° 保证端点在杯身下方）
+    draw.arc([640 * s, 388 * s, 824 * s, 606 * s], start=-118, end=118,
+             fill=handle_color, width=int(44 * s))
 
-    # 2. 杯身：直筒矩形 + 底部圆弧鼓肚
-    draw.rectangle([330 * s, 370 * s, 694 * s, 656 * s], fill=body_fill)
+    # 2. 杯身：直筒矩形 + 底部圆弧鼓肚（矩形底边 = 椭圆最宽处，平滑衔接）
+    draw.rectangle([330 * s, 370 * s, 694 * s, 667 * s], fill=body_fill)
     draw.ellipse([330 * s, 606 * s, 694 * s, 728 * s], fill=body_fill)
 
     # 3. 杯口沿（比杯身略宽，形成唇边）
@@ -51,14 +52,18 @@ def draw_mug(draw, body_fill, liquid_color, swirl_color, handle_color, hole_colo
     draw.ellipse([338 * s, 326 * s, 686 * s, 424 * s], fill=hole_color)
     # 5. 液面（比洞再小一圈，明显看出有液体）
     draw.ellipse([358 * s, 338 * s, 666 * s, 412 * s], fill=liquid_color)
+    if liquid_top_color is not None:
+        # 上层“奶盖”：液面上半弦月
+        draw.pieslice([358 * s, 338 * s, 666 * s, 412 * s], start=180, end=360,
+                      fill=liquid_top_color)
     # 6. 奶漩：液面上的弧线
     draw.arc([400 * s, 346 * s, 626 * s, 404 * s], start=120, end=340,
-             fill=swirl_color, width=int(9 * s))
+             fill=swirl_color, width=int(swirl_width * s))
     draw.arc([470 * s, 356 * s, 560 * s, 394 * s], start=150, end=330,
-             fill=swirl_color, width=int(6 * s))
+             fill=swirl_color, width=int(max(4, swirl_width - 3) * s))
 
-    # 7. 杯身左侧高光竖条
-    draw.rounded_rectangle([352 * s, 480 * s, 374 * s, 636 * s],
+    # 7. 杯身左侧高光竖条（缩短，远离轮廓边缘）
+    draw.rounded_rectangle([356 * s, 480 * s, 378 * s, 616 * s],
                            radius=11 * s, fill=highlight_color)
 
 
@@ -125,7 +130,12 @@ def save(img, name):
     print("saved", out.name)
 
 
-# --- A：绿底图标版（主推） ---
+# 食材色定义
+SOYBEAN_YELLOW = (242, 201, 76, 255)   # 黄豆色 #F2C94C
+RED_BEAN = (168, 67, 58, 255)          # 红豆色 #A8433A
+MILK_WHITE = (251, 246, 234, 255)      # 米白液面 #FBF6EA
+
+# --- A：绿底图标版（豆黄液 + 米白豆） ---
 img, draw = new_canvas(GREEN)
 draw_mug(draw, body_fill=CREAM, liquid_color=YELLOW, swirl_color=CREAM,
          handle_color=CREAM, hole_color=GREEN, highlight_color=(255, 255, 255, 255))
@@ -134,7 +144,7 @@ draw_sparkle(draw, (300, 252), 26, CREAM)
 draw_sparkle(draw, (786, 540), 16, YELLOW_LIGHT)
 save(img, "logo-a-green.png")
 
-# --- B：米色底亮色版 ---
+# --- B：米色底亮色版（豆黄液 + 绿豆——米色豆会融进米色底，故保留绿豆） ---
 img, draw = new_canvas(CREAM)
 draw_mug(draw, body_fill=GREEN, liquid_color=YELLOW, swirl_color=CREAM,
          handle_color=GREEN, hole_color=CREAM, highlight_color=(86, 156, 126, 255))
@@ -142,6 +152,45 @@ draw_bean(img, bean_fill=GREEN, eye_color=CREAM, center=(748, 268), angle=-28)
 draw_sparkle(draw, (300, 252), 26, YELLOW)
 draw_sparkle(draw, (786, 540), 16, GREEN)
 save(img, "logo-b-cream.png")
+
+# --- D：米白液体 + 黄豆色豆子 ---
+img, draw = new_canvas(GREEN)
+draw_mug(draw, body_fill=CREAM, liquid_color=MILK_WHITE, swirl_color=YELLOW,
+         handle_color=CREAM, hole_color=GREEN, highlight_color=(255, 255, 255, 255),
+         swirl_width=7)
+draw_bean(img, bean_fill=SOYBEAN_YELLOW, eye_color=GREEN, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, CREAM)
+draw_sparkle(draw, (786, 540), 16, YELLOW_LIGHT)
+save(img, "logo-d-milk-soybean.png")
+
+# --- E：米白液体 + 红豆色豆子 ---
+img, draw = new_canvas(GREEN)
+draw_mug(draw, body_fill=CREAM, liquid_color=MILK_WHITE, swirl_color=YELLOW,
+         handle_color=CREAM, hole_color=GREEN, highlight_color=(255, 255, 255, 255),
+         swirl_width=7)
+draw_bean(img, bean_fill=RED_BEAN, eye_color=CREAM, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, CREAM)
+draw_sparkle(draw, (786, 540), 16, YELLOW_LIGHT)
+save(img, "logo-e-milk-redbean.png")
+
+# --- F：红豆色液体 + 黄豆色豆子（红豆糊的感觉） ---
+img, draw = new_canvas(GREEN)
+draw_mug(draw, body_fill=CREAM, liquid_color=RED_BEAN, swirl_color=MILK_WHITE,
+         handle_color=CREAM, hole_color=GREEN, highlight_color=(255, 255, 255, 255))
+draw_bean(img, bean_fill=SOYBEAN_YELLOW, eye_color=GREEN, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, CREAM)
+draw_sparkle(draw, (786, 540), 16, YELLOW_LIGHT)
+save(img, "logo-f-redbean-drink.png")
+
+# --- G：分层奶盖（豆黄液 + 米白奶盖） + 红豆色豆子 ---
+img, draw = new_canvas(GREEN)
+draw_mug(draw, body_fill=CREAM, liquid_color=YELLOW, swirl_color=YELLOW,
+         handle_color=CREAM, hole_color=GREEN, highlight_color=(255, 255, 255, 255),
+         liquid_top_color=MILK_WHITE)
+draw_bean(img, bean_fill=RED_BEAN, eye_color=CREAM, center=(748, 268), angle=-28)
+draw_sparkle(draw, (300, 252), 26, CREAM)
+draw_sparkle(draw, (786, 540), 16, YELLOW_LIGHT)
+save(img, "logo-g-layered.png")
 
 # --- C：文字版 ---
 img, draw = new_canvas(GREEN)
@@ -156,7 +205,11 @@ draw_sparkle(draw, (872, 244), 16, CREAM)
 save(img, "logo-c-text.png")
 
 # --- 预览拼图（评估用，非上传素材） ---
-files = ["logo-a-green.png", "logo-b-cream.png", "logo-c-text.png"]
+files = [
+    "logo-a-green.png", "logo-b-cream.png", "logo-c-text.png",
+    "logo-d-milk-soybean.png", "logo-e-milk-redbean.png",
+    "logo-f-redbean-drink.png", "logo-g-layered.png",
+]
 cell, gap, pad = 420, 40, 60
 row = len(files) * cell + (len(files) - 1) * gap
 sheet = Image.new("RGB", (pad * 2 + row, pad * 2 + cell * 2 + gap + 120), (250, 250, 250))
