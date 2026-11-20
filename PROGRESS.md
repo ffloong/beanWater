@@ -59,6 +59,7 @@ npm run build:weapp   # 小程序构建 → dist/weapp（微信开发者工具�
 npm test              # vitest 单测（25 个）
 npm run typecheck     # tsc --noEmit
 npm run check:data    # 种子数据校验（引用闭环/分类覆盖）
+node scripts/verify-weapp.mjs  # 驱动微信开发者工具模拟器逐页截图验证（需已登录工具）
 ```
 
 ## 已知踩坑记录（新会话必读）
