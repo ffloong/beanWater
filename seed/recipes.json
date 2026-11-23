@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-20",
+  "version": "2026-11-23",
   "recipes": [
     {
       "id": "classic_soybean_milk",
@@ -1491,6 +1491,1002 @@
         "乳制品过敏者选择豆浆基底"
       ],
       "emoji": "🍮"
+    },
+    {
+      "id": "chickpea_soy_milk",
+      "title": "鹰嘴豆豆浆",
+      "emoji": "🫛",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "chickpea",
+          "amount": 50,
+          "required": true
+        },
+        {
+          "ingredientId": "soybean",
+          "amount": 20,
+          "required": true
+        }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "鹰嘴豆、黄豆清洗，提前浸泡。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择豆浆模式，口感比纯黄豆更绵密，带坚果香。"
+      ],
+      "tags": [
+        "早餐",
+        "高蛋白",
+        "香浓",
+        "家常"
+      ],
+      "nutrition": {
+        "caloriesKcal": 240,
+        "proteinG": 13,
+        "sugarG": 5
+      },
+      "warnings": []
+    },
+    {
+      "id": "red_rice_peanut_soy_milk",
+      "title": "红米花生豆浆",
+      "emoji": "🌾",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "soybean",
+          "amount": 30,
+          "required": true
+        },
+        {
+          "ingredientId": "red_rice",
+          "amount": 25,
+          "required": true
+        },
+        {
+          "ingredientId": "peanut",
+          "amount": 25,
+          "required": true
+        }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "黄豆、红米、花生清洗，提前浸泡。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择豆浆模式，谷物与花生香气浓郁。"
+      ],
+      "tags": [
+        "早餐",
+        "香浓",
+        "饱腹"
+      ],
+      "nutrition": {
+        "caloriesKcal": 250,
+        "proteinG": 12,
+        "sugarG": 6
+      },
+      "warnings": []
+    },
+    {
+      "id": "four_gentle_soy_milk",
+      "title": "四神豆浆",
+      "emoji": "🌿",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "soybean",
+          "amount": 30,
+          "required": true
+        },
+        {
+          "ingredientId": "lotus_seed",
+          "amount": 15,
+          "required": true
+        },
+        {
+          "ingredientId": "poria",
+          "amount": 12,
+          "required": true
+        },
+        {
+          "ingredientId": "euryale_seed",
+          "amount": 12,
+          "required": true
+        }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "莲子、茯苓、芡实清洗，与黄豆一起提前浸泡。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择豆浆模式，传统食养的温和搭配。"
+      ],
+      "tags": [
+        "早餐",
+        "传统食养",
+        "温和",
+        "家常"
+      ],
+      "nutrition": {
+        "caloriesKcal": 230,
+        "proteinG": 12,
+        "sugarG": 6
+      },
+      "warnings": []
+    },
+    {
+      "id": "mulberry_black_soybean_milk",
+      "title": "桑椹黑豆豆浆",
+      "emoji": "🍇",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 22,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "black_soybean",
+          "amount": 40,
+          "required": true
+        },
+        {
+          "ingredientId": "mulberry",
+          "amount": 20,
+          "required": true
+        }
+      ],
+      "waterMl": 850,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "黑豆清洗，提前浸泡；桑椹干冲洗。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择豆浆模式，酸甜果香融合豆香。"
+      ],
+      "tags": [
+        "早餐",
+        "香浓",
+        "长辈",
+        "黑色食材传统搭配"
+      ],
+      "nutrition": {
+        "caloriesKcal": 260,
+        "proteinG": 13,
+        "sugarG": 14
+      },
+      "warnings": []
+    },
+    {
+      "id": "purple_potato_oat_porridge",
+      "title": "紫薯燕麦奶香糊",
+      "emoji": "🪻",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 16,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "purple_sweet_potato",
+          "amount": 60,
+          "required": true
+        },
+        {
+          "ingredientId": "oat",
+          "amount": 30,
+          "required": true
+        },
+        {
+          "ingredientId": "milk",
+          "amount": 150,
+          "required": false
+        }
+      ],
+      "waterMl": 750,
+      "minWaterMl": 400,
+      "soakMinutes": 120,
+      "mode": "米糊",
+      "steps": [
+        "干紫薯片提前泡软，燕麦清洗。",
+        "放入破壁机，加水至 {water}ml，喜欢奶香可加牛奶。",
+        "选择米糊模式，成品呈天然紫色。"
+      ],
+      "tags": [
+        "早餐",
+        "饱腹",
+        "高纤维",
+        "儿童"
+      ],
+      "nutrition": {
+        "caloriesKcal": 230,
+        "proteinG": 7,
+        "sugarG": 16
+      },
+      "warnings": []
+    },
+    {
+      "id": "purple_potato_black_rice_porridge",
+      "title": "紫薯黑米糊",
+      "emoji": "🌌",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "purple_sweet_potato",
+          "amount": 60,
+          "required": true
+        },
+        {
+          "ingredientId": "black_rice",
+          "amount": 40,
+          "required": true
+        }
+      ],
+      "waterMl": 750,
+      "minWaterMl": 400,
+      "soakMinutes": 180,
+      "mode": "米糊",
+      "steps": [
+        "干紫薯片泡软，黑米清洗。",
+        "一起放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，双紫配色，绵密清甜。"
+      ],
+      "tags": [
+        "早餐",
+        "黑色食材传统搭配",
+        "饱腹"
+      ],
+      "nutrition": {
+        "caloriesKcal": 230,
+        "proteinG": 6,
+        "sugarG": 14
+      },
+      "warnings": []
+    },
+    {
+      "id": "chestnut_millet_porridge",
+      "title": "栗子小米糊",
+      "emoji": "🌰",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 16,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "chestnut",
+          "amount": 80,
+          "required": true
+        },
+        {
+          "ingredientId": "millet",
+          "amount": 40,
+          "required": true
+        }
+      ],
+      "waterMl": 750,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "板栗去壳去皮切小块（生板栗须煮熟），小米清洗。",
+        "一起放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，甜糯顺滑。"
+      ],
+      "tags": [
+        "早餐",
+        "清甜",
+        "温和",
+        "儿童"
+      ],
+      "nutrition": {
+        "caloriesKcal": 230,
+        "proteinG": 6,
+        "sugarG": 14
+      },
+      "warnings": []
+    },
+    {
+      "id": "glutinous_red_date_porridge",
+      "title": "糯米红枣糊",
+      "emoji": "🍡",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "glutinous_rice",
+          "amount": 50,
+          "required": true
+        },
+        {
+          "ingredientId": "red_date",
+          "amount": 15,
+          "required": true
+        }
+      ],
+      "waterMl": 750,
+      "minWaterMl": 400,
+      "soakMinutes": 120,
+      "mode": "米糊",
+      "steps": [
+        "糯米提前浸泡，红枣去核撕小块。",
+        "一起放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，软糯香甜。"
+      ],
+      "tags": [
+        "早餐",
+        "清甜",
+        "温和",
+        "长辈"
+      ],
+      "nutrition": {
+        "caloriesKcal": 240,
+        "proteinG": 5,
+        "sugarG": 16
+      },
+      "warnings": [
+        "控糖人群减少红枣量"
+      ]
+    },
+    {
+      "id": "black_rice_glutinous_porridge",
+      "title": "黑米糯米糊",
+      "emoji": "🍘",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 20,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "black_rice",
+          "amount": 40,
+          "required": true
+        },
+        {
+          "ingredientId": "glutinous_rice",
+          "amount": 40,
+          "required": true
+        }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 180,
+      "mode": "米糊",
+      "steps": [
+        "黑米、糯米清洗，提前浸泡。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，软糯浓稠。"
+      ],
+      "tags": [
+        "早餐",
+        "饱腹",
+        "家常"
+      ],
+      "nutrition": {
+        "caloriesKcal": 240,
+        "proteinG": 6,
+        "sugarG": 14
+      },
+      "warnings": []
+    },
+    {
+      "id": "apricot_glutinous_cereal",
+      "title": "杏仁糯米糊",
+      "emoji": "🥜",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "apricot_kernel",
+          "amount": 30,
+          "required": true
+        },
+        {
+          "ingredientId": "glutinous_rice",
+          "amount": 50,
+          "required": true
+        }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 120,
+      "mode": "米糊",
+      "steps": [
+        "糯米提前浸泡；甜杏仁（南杏仁）清洗。",
+        "一起放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，即传统杏仁茶的做法，香浓顺滑。"
+      ],
+      "tags": [
+        "下午茶",
+        "香浓",
+        "长辈",
+        "传统食养"
+      ],
+      "nutrition": {
+        "caloriesKcal": 260,
+        "proteinG": 8,
+        "sugarG": 10
+      },
+      "warnings": []
+    },
+    {
+      "id": "four_herb_yam_porridge",
+      "title": "茯苓芡实山药糊",
+      "emoji": "🌿",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "poria",
+          "amount": 15,
+          "required": true
+        },
+        {
+          "ingredientId": "euryale_seed",
+          "amount": 15,
+          "required": true
+        },
+        {
+          "ingredientId": "chinese_yam",
+          "amount": 120,
+          "required": true
+        },
+        {
+          "ingredientId": "millet",
+          "amount": 40,
+          "required": true
+        }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 120,
+      "mode": "米糊",
+      "steps": [
+        "茯苓、芡实清洗提前浸泡；山药削皮切块（黏液致痒可戴手套）。",
+        "全部食材放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，务必熟透，口感绵密温和。"
+      ],
+      "tags": [
+        "早餐",
+        "传统食养",
+        "温和"
+      ],
+      "nutrition": {
+        "caloriesKcal": 220,
+        "proteinG": 7,
+        "sugarG": 8
+      },
+      "warnings": []
+    },
+    {
+      "id": "black_goji_oat_porridge",
+      "title": "黑枸杞燕麦糊",
+      "emoji": "🫐",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 12,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "oat",
+          "amount": 40,
+          "required": true
+        },
+        {
+          "ingredientId": "black_goji",
+          "amount": 10,
+          "required": true
+        }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "燕麦清洗放入破壁机，加水至 {water}ml，选择米糊模式。",
+        "做好后稍凉至约 60°C。",
+        "拌入黑枸杞，避免高温久煮破坏花青素。"
+      ],
+      "tags": [
+        "早餐",
+        "快手",
+        "轻食"
+      ],
+      "nutrition": {
+        "caloriesKcal": 200,
+        "proteinG": 7,
+        "sugarG": 8
+      },
+      "warnings": []
+    },
+    {
+      "id": "mulberry_rice_porridge",
+      "title": "桑椹紫米糊",
+      "emoji": "🍇",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "purple_rice",
+          "amount": 40,
+          "required": true
+        },
+        {
+          "ingredientId": "mulberry",
+          "amount": 20,
+          "required": true
+        }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 180,
+      "mode": "米糊",
+      "steps": [
+        "紫米清洗，提前浸泡；桑椹干冲洗。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，黑紫系果香米糊。"
+      ],
+      "tags": [
+        "早餐",
+        "黑色食材传统搭配",
+        "家常"
+      ],
+      "nutrition": {
+        "caloriesKcal": 240,
+        "proteinG": 6,
+        "sugarG": 16
+      },
+      "warnings": []
+    },
+    {
+      "id": "chickpea_pumpkin_porridge",
+      "title": "鹰嘴豆南瓜糊",
+      "emoji": "🫛",
+      "category": "五谷糊",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "chickpea",
+          "amount": 40,
+          "required": true
+        },
+        {
+          "ingredientId": "pumpkin",
+          "amount": 150,
+          "required": true
+        }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 480,
+      "mode": "米糊/浓汤",
+      "steps": [
+        "鹰嘴豆提前浸泡；南瓜去皮去瓤切块。",
+        "一起放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，豆香与清甜融合。"
+      ],
+      "tags": [
+        "早餐",
+        "饱腹",
+        "家常"
+      ],
+      "nutrition": {
+        "caloriesKcal": 240,
+        "proteinG": 8,
+        "sugarG": 12
+      },
+      "warnings": []
+    },
+    {
+      "id": "red_rice_oat_porridge",
+      "title": "红米燕麦糊",
+      "emoji": "🌾",
+      "category": "五谷糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "red_rice",
+          "amount": 40,
+          "required": true
+        },
+        {
+          "ingredientId": "oat",
+          "amount": 30,
+          "required": true
+        }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 120,
+      "mode": "米糊",
+      "steps": [
+        "红米、燕麦清洗，红米提前浸泡。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，高纤维饱腹。"
+      ],
+      "tags": [
+        "早餐",
+        "高纤维",
+        "饱腹"
+      ],
+      "nutrition": {
+        "caloriesKcal": 230,
+        "proteinG": 7,
+        "sugarG": 7
+      },
+      "warnings": []
+    },
+    {
+      "id": "black_goji_snow_fungus_soup",
+      "title": "黑枸杞银耳羹",
+      "emoji": "🌙",
+      "category": "汤羹",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 2,
+      "ingredients": [
+        {
+          "ingredientId": "snow_fungus",
+          "amount": 15,
+          "required": true
+        },
+        {
+          "ingredientId": "lotus_seed",
+          "amount": 20,
+          "required": true
+        },
+        {
+          "ingredientId": "black_goji",
+          "amount": 10,
+          "required": true
+        }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 240,
+      "mode": "浓汤",
+      "steps": [
+        "银耳提前泡发撕小朵，莲子清洗。",
+        "放入破壁机，加水至 {water}ml，选择浓汤模式。",
+        "出胶后稍凉至约 60°C 再撒入黑枸杞。"
+      ],
+      "tags": [
+        "晚餐",
+        "温和",
+        "家常",
+        "长辈"
+      ],
+      "nutrition": {
+        "caloriesKcal": 190,
+        "proteinG": 5,
+        "sugarG": 15
+      },
+      "warnings": []
+    },
+    {
+      "id": "five_bean_soy_milk",
+      "title": "五豆豆浆",
+      "emoji": "🫘",
+      "category": "养生豆浆",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "soybean",
+          "amount": 20,
+          "required": true
+        },
+        {
+          "ingredientId": "black_soybean",
+          "amount": 20,
+          "required": true
+        },
+        {
+          "ingredientId": "red_bean",
+          "amount": 20,
+          "required": true
+        },
+        {
+          "ingredientId": "mung_bean",
+          "amount": 20,
+          "required": true
+        },
+        {
+          "ingredientId": "chickpea",
+          "amount": 20,
+          "required": true
+        }
+      ],
+      "waterMl": 1000,
+      "minWaterMl": 450,
+      "soakMinutes": 480,
+      "mode": "豆浆",
+      "steps": [
+        "五种豆子清洗，提前浸泡。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择豆浆模式，豆香层次最丰富的一款。"
+      ],
+      "tags": [
+        "早餐",
+        "高蛋白",
+        "家常",
+        "饱腹"
+      ],
+      "nutrition": {
+        "caloriesKcal": 260,
+        "proteinG": 14,
+        "sugarG": 7
+      },
+      "warnings": []
+    },
+    {
+      "id": "yam_chestnut_porridge",
+      "title": "山药板栗糊",
+      "emoji": "🍯",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "chinese_yam",
+          "amount": 100,
+          "required": true
+        },
+        {
+          "ingredientId": "chestnut",
+          "amount": 60,
+          "required": true
+        },
+        {
+          "ingredientId": "millet",
+          "amount": 40,
+          "required": true
+        }
+      ],
+      "waterMl": 750,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "山药削皮切块（黏液致痒可戴手套），板栗去壳切小块。",
+        "全部食材放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，务必熟透，甜糯绵密。"
+      ],
+      "tags": [
+        "早餐",
+        "清甜",
+        "温和",
+        "儿童"
+      ],
+      "nutrition": {
+        "caloriesKcal": 230,
+        "proteinG": 6,
+        "sugarG": 14
+      },
+      "warnings": []
+    },
+    {
+      "id": "black_red_rice_porridge",
+      "title": "黑米红米双米糊",
+      "emoji": "🌾",
+      "category": "米糊",
+      "servings": 2,
+      "timeMinutes": 20,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "black_rice",
+          "amount": 40,
+          "required": true
+        },
+        {
+          "ingredientId": "red_rice",
+          "amount": 40,
+          "required": true
+        },
+        {
+          "ingredientId": "glutinous_rice",
+          "amount": 20,
+          "required": true
+        }
+      ],
+      "waterMl": 800,
+      "minWaterMl": 400,
+      "soakMinutes": 180,
+      "mode": "米糊",
+      "steps": [
+        "黑米、红米、糯米清洗，提前浸泡。",
+        "放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，双米配色，香浓饱腹。"
+      ],
+      "tags": [
+        "早餐",
+        "高纤维",
+        "饱腹"
+      ],
+      "nutrition": {
+        "caloriesKcal": 240,
+        "proteinG": 7,
+        "sugarG": 12
+      },
+      "warnings": []
+    },
+    {
+      "id": "chestnut_pumpkin_porridge",
+      "title": "板栗南瓜糊",
+      "emoji": "🎃",
+      "category": "五谷糊",
+      "servings": 2,
+      "timeMinutes": 18,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "chestnut",
+          "amount": 60,
+          "required": true
+        },
+        {
+          "ingredientId": "pumpkin",
+          "amount": 150,
+          "required": true
+        },
+        {
+          "ingredientId": "millet",
+          "amount": 30,
+          "required": true
+        }
+      ],
+      "waterMl": 750,
+      "minWaterMl": 400,
+      "soakMinutes": 0,
+      "mode": "米糊",
+      "steps": [
+        "板栗去壳切小块，南瓜去皮去瓤切块。",
+        "一起放入破壁机，加水至 {water}ml。",
+        "选择米糊模式，天然清甜无需加糖。"
+      ],
+      "tags": [
+        "早餐",
+        "清甜",
+        "家常",
+        "儿童"
+      ],
+      "nutrition": {
+        "caloriesKcal": 220,
+        "proteinG": 6,
+        "sugarG": 15
+      },
+      "warnings": []
+    },
+    {
+      "id": "poria_euryale_snow_fungus_soup",
+      "title": "茯苓芡实银耳羹",
+      "emoji": "🍵",
+      "category": "汤羹",
+      "servings": 2,
+      "timeMinutes": 25,
+      "difficulty": 2,
+      "ingredients": [
+        {
+          "ingredientId": "snow_fungus",
+          "amount": 15,
+          "required": true
+        },
+        {
+          "ingredientId": "poria",
+          "amount": 12,
+          "required": true
+        },
+        {
+          "ingredientId": "euryale_seed",
+          "amount": 15,
+          "required": true
+        },
+        {
+          "ingredientId": "red_date",
+          "amount": 10,
+          "required": false
+        }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 240,
+      "mode": "浓汤",
+      "steps": [
+        "银耳提前泡发撕小朵；茯苓、芡实、红枣清洗。",
+        "放入破壁机，加水至 {water}ml，选择浓汤模式。",
+        "出胶后温热食用，传统食养的温和搭配。"
+      ],
+      "tags": [
+        "晚餐",
+        "温和",
+        "传统食养",
+        "长辈"
+      ],
+      "nutrition": {
+        "caloriesKcal": 170,
+        "proteinG": 4,
+        "sugarG": 13
+      },
+      "warnings": []
+    },
+    {
+      "id": "mung_bean_lily_soup",
+      "title": "绿豆百合羹",
+      "emoji": "🍧",
+      "category": "汤羹",
+      "servings": 2,
+      "timeMinutes": 20,
+      "difficulty": 1,
+      "ingredients": [
+        {
+          "ingredientId": "mung_bean",
+          "amount": 50,
+          "required": true
+        },
+        {
+          "ingredientId": "lily_bulb",
+          "amount": 15,
+          "required": true
+        },
+        {
+          "ingredientId": "red_date",
+          "amount": 10,
+          "required": false
+        }
+      ],
+      "waterMl": 900,
+      "minWaterMl": 450,
+      "soakMinutes": 120,
+      "mode": "浓汤",
+      "steps": [
+        "绿豆、百合清洗，绿豆提前浸泡。",
+        "放入破壁机，加水至 {water}ml，选择浓汤模式。",
+        "煮至豆子开花，清甜解腻；脾胃虚寒者适量。"
+      ],
+      "tags": [
+        "晚餐",
+        "清爽",
+        "家常"
+      ],
+      "nutrition": {
+        "caloriesKcal": 190,
+        "proteinG": 6,
+        "sugarG": 12
+      },
+      "warnings": []
     }
   ]
 }
